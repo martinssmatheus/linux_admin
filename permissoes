@@ -1,0 +1,34 @@
+### Permissoes diretorios e arquivos ###
+
+ -rw-rw-r-- vamos dividir as permissoes em 4 partes para explicar melhor
+
+        -        ||      rw-      ||       rw-      ||   r--
+tipo do arquivo  || perm do dono  || perm do grupo  || outros
+
+
+-rwx rwx rwx -> saida da permissao cheia, liberando tudo seria a 777 (modo octal)
+
+Tipos de arquivos
+- -> arquivo de texto
+l -> link simbolico
+b -> disp de bloco
+c -> disp de caractere
+s -> socket
+d -> diretorios
+
+
+nome                                 octal              QUEM?
+- -> ausencia da permissao             0                  u -> dono do arquivo  
+r -> perm de leitura                   4                  g -> grupo dono
+w -> perm de escrita                   2                  o -> outros
+x -> perm de execucao                  1                  a => all
+t -> stick bit                         1
+S -> SGID                              2                                                                                                             >
+S -> SUID                              4
+
+Comandos:
+
+chmod -> modifica as permissoes
+chown -> modifica dono/grupo
+chgrp -> modifica o grupo
+umask -> define a perm padrao
